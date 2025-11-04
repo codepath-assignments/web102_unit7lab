@@ -32,20 +32,21 @@ const App = () => {
 
 
   // Sets up routes
-  let element = useRoutes([
+  const element = useRoutes([
     {
-      path: "/",
-      element:<ReadPosts data={posts}/>
+        path: "/",
+        element: <ReadPosts />
     },
     {
-      path:"/edit/:id",
-      element: <EditPost data={posts} />
+        path: "/edit/:id",
+        element: <EditPost data={posts} /> // You can remove this if EditPost also fetches independently
     },
     {
-      path:"/new",
-      element: <CreatePost />
+        path: "/new",
+        element: <CreatePost />
     }
-  ]);
+]);
+
 
   return ( 
 
